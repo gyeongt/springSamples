@@ -17,8 +17,9 @@
 	values(#{id}, #{pwd}, #{name}, #{email}, 3)
 </insert>
 
-<select id="login" parameterType="ssg.com.a.dto.MemberDto" resultType="ssg.com.a.dto.MemberDto">
-	select id, name, email auth
+<select id="login" parameterType="ssg.com.a.dto.MemberDto" 
+					resultType="ssg.com.a.dto.MemberDto">
+	select id, name, email, auth
 	from member
 	where id=#{id} and pwd=#{pwd}
 </select>

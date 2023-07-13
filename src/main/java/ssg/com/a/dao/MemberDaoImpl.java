@@ -11,6 +11,8 @@ public class MemberDaoImpl implements MemberDao{
 
 	@Autowired
 	SqlSession session;
+	
+	String ns = "Member.";
 
 	@Override
 	public int idcheck(String id) {
@@ -29,17 +31,9 @@ public class MemberDaoImpl implements MemberDao{
 	}
 
 	@Override
-	public MemberDto login(MemberDto dto) {	
-		
-		return session.selectOne("Member.login", dto);
+	public MemberDto login(MemberDto dto) {		
+		return session.selectOne(ns + "login", dto);
 	}
-	
-	
-
-
-
-	
-	
 	
 	
 	

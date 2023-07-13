@@ -62,6 +62,7 @@ public class MemberController {
 		
 		return "message";
 	}
+	
 	@PostMapping("loginAf.do")
 	public String loginAf(MemberDto mem, Model model, HttpServletRequest request) {
 		System.out.println("MemberController login() " + new Date());

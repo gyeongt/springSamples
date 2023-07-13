@@ -25,7 +25,7 @@ if(message != null && message.equals("") == false){
 	}
 }
 
-String login = (String)request.getAttribute("log");
+String login = (String)request.getAttribute("loginmsg");
 if(login != null && login.equals("") == false){
 	if(login.equals("LOGIN_NO")){
 		%>
@@ -37,6 +37,7 @@ if(login != null && login.equals("") == false){
 	}else{
 		%>
 		<script>
+		alert("로그인성공!");
 		location.href = "bbslist.do";
 		</script>
 		<%
