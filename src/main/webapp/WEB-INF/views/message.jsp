@@ -45,20 +45,20 @@ if(login != null && login.equals("") == false){
 }
 
 
-String write = (String)request.getAttribute("write");
-if(write != null && write.equals("") == false){
-	if(write.equals("WRITE_YES")){
+String bbswrite = (String)request.getAttribute("bbswrite");
+if(bbswrite != null && bbswrite.equals("") == false){
+	if(bbswrite.equals("WRITE_YES")){
 		%>
 		<script>
 		alert("게시글이 작성되었습니다");
-		location.href = "./bbs?param=bbslist";
+		location.href = "bbslist.do";
 		</script>
 		<%
 	}else{
 		%>
 		<script>
 		alert("다시 작성해 주십시오");
-		location.href = "./bbs?param=bbswrite";
+		location.href = "bbswrite.do";
 		</script>		
 		<%
 	}
