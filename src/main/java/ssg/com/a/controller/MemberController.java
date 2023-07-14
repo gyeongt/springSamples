@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import ssg.com.a.dto.BbsDto;
 import ssg.com.a.dto.MemberDto;
 import ssg.com.a.service.MemberService;
 
@@ -77,4 +78,5 @@ public class MemberController {
 		
 		return "message";
 	}
+	
 }
